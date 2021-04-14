@@ -1,3 +1,5 @@
+$blue-title: #63b3ed;
+
 .login__container {
   background-color: #f7fafc;
   height: 100vh;
@@ -14,7 +16,7 @@
     margin-bottom: 39px;
   }
   .login__heading span {
-    color: #6aeee3;
+    color: $blue-title;
   }
 
   .login__form {
@@ -22,38 +24,42 @@
     max-width: 300px;
     display: flex;
     flex-direction: column;
-    padding: 150px 300px;
+    padding: 50px 100px;
     margin: 0 auto;
 
     .login__username,
     .login__password {
       display: flex;
       flex-direction: column;
+      margin-bottom: 10px;
       .login__label {
-        width: 126px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
         height: 23px;
         left: 540px;
         top: 226px;
-        font-size: 20px;
-        margin-bottom: 22px;
-        // background-color: #edf2f7;
+        font-size: 18px;
+        margin-bottom: 15px;
       }
       .login__input {
         padding: 8px;
         margin-bottom: 15px;
         width: 300px;
       }
-    }
 
-    .login__username {
-    }
-
-    .login__password {
+      input {
+        background-color: #edf2f7;
+        border: none;
+        height: 30px;
+        border-radius: 5px;
+      }
     }
 
     .login__signin {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       margin-top: 13px;
 
       .login__btn-signin {
