@@ -1,5 +1,5 @@
 .header__container {
-  box-shadow: 1px 1px 1px black;
+  z-index: 0;
 
   .header__wrapper {
     display: flex;
@@ -27,17 +27,24 @@
         padding: 5px;
 
         .header__name-span {
-          color: #51abbb;
+          color: var(--blue-title);
         }
       }
     }
 
     .header__right {
+      .header__right__account {
+        max-width: 50px;
+        max-height: 50px;
+        margin: 11px 35px;
+      }
       .header__right__account img {
-        width: 50px;
-        height: 53px;
+        max-width: 50px;
+        max-height: 50px;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
-        margin: 5px 35px;
       }
     }
   }
