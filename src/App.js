@@ -1,18 +1,17 @@
 import "./App.css";
-import HomePage from "./pages/HomePage/HomePage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Login from "./components/Login/Login";
-import SubmitArticles from "./pages/SubmitArticles/SubmitArticles";
+import LoginPage from "./pages/Login/LoginPage";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route path="/login">
-          <Login />
+          <LoginPage />
         </Route>
         <Route path="/">
-          <HomePage />
+          <Dashboard />
         </Route>
       </Switch>
     </Router>

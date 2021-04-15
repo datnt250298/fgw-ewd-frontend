@@ -1,6 +1,7 @@
+
 import React from "react";
 import Layout from "../../layout/Layout";
 
-export default function SubmitArticles() {
+export default function Dashboard() {
   return <Layout />;
 }

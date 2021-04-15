@@ -1,10 +1,8 @@
 import React from "react";
 import Body from "../components/Body/Body";
 import Content from "../components/Content/Content";
-// import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Sidebar from "../components/Sidebar/Sidebar";
-// import "./Header.scss";
 export default function Layout(props) {
   return (
     <div>

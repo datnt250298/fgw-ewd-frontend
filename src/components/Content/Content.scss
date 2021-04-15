@@ -2,3 +2,83 @@
   width: 100vw;
   height: 100vh;
 }
+
+.manage {
+  margin-left: 28px;
+
+  .manage__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    gap: 25px;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 8px;
+    width: 250px;
+    margin: 44px 0 71px 0;
+  }
+
+  .articles__container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .article__wrapper {
+      background-color: #f7fafc;
+      display: flex;
+      align-items: center;
+      padding: 40px 30px;
+      gap: 100px;
+      margin-right: 57px;
+
+      .article__title {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .article__posted {
+        font-size: 14px;
+        color: #a0aec0;
+      }
+
+      .article__views {
+        display: flex;
+        align-items: center;
+      }
+
+      .article__duedate {
+        border: 1px solid red;
+        box-sizing: border-box;
+        border-radius: 50px;
+        color: red;
+        padding: 7px 15px;
+        &__green {
+          background: #1dff09;
+          color: white;
+          border: none;
+        }
+        &__red {
+          background: red;
+          color: white;
+          border: none;
+        }
+      }
+
+      .article__views-number {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: #2a4365;
+        padding: 10px;
+      }
+
+      .article__views {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #a0aec0;
+      }
+    }
+  }
+}
