@@ -1,83 +1,68 @@
-.content {
+.content__wrapper {
   width: 100vw;
   height: 100vh;
-}
+  color: var(--text-color);
 
-.manage {
-  margin-left: 28px;
+  .content {
+    margin-left: 28px;
+    margin-top: 44px;
 
-  .manage__title {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
-    display: flex;
-    gap: 25px;
-    border-bottom: 1px solid #e2e8f0;
-    padding: 8px;
-    width: 250px;
-    margin: 44px 0 71px 0;
-  }
-
-  .articles__container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-
-    .article__wrapper {
-      background-color: #f7fafc;
+    .content__table {
       display: flex;
       align-items: center;
-      padding: 40px 30px;
       gap: 100px;
-      margin-right: 57px;
 
-      .article__title {
+      .table__head--item {
         font-weight: bold;
-        font-size: 18px;
+        font-size: 16px;
       }
+    }
 
-      .article__posted {
-        font-size: 14px;
-        color: #a0aec0;
-      }
+    .articles__container {
+      border-collapse: separate;
+      border-spacing: 0em 8px;
 
-      .article__views {
-        display: flex;
-        align-items: center;
-      }
-
-      .article__duedate {
-        border: 1px solid red;
-        box-sizing: border-box;
-        border-radius: 50px;
-        color: red;
-        padding: 7px 15px;
-        &__green {
-          background: #1dff09;
-          color: white;
-          border: none;
-        }
-        &__red {
-          background: red;
-          color: white;
-          border: none;
+      thead {
+        th{
+          border-bottom: 1px solid #E2E8F0;
+          height: 50px;
+          width: 25%;
+          font-size: 16px;
         }
       }
 
-      .article__views-number {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 21px;
-        color: #2a4365;
-        padding: 10px;
-      }
+      .article__rows {
+        background-color: #f7fafc;
+        height: 100px;
+        margin-bottom: 8px;
+        text-align: center;
 
-      .article__views {
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        color: #a0aec0;
+
+        .article__title {
+          font-weight: bold;
+          font-size: 18px;
+        }
+        .article__duedate--wrapper {
+          .article__duedate {
+            margin: auto;
+            width: 50%;
+            border: 1px solid red;
+            box-sizing: border-box;
+            border-radius: 50px;
+            color: red;
+            padding: 7px 0px;
+            &__green {
+              background: #1dff09;
+              color: white;
+              border: none;
+            }
+            &__red {
+              background: red;
+              color: white;
+              border: none;
+            }
+          }
+        }
       }
     }
   }

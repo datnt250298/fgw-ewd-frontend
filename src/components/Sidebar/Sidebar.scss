@@ -3,21 +3,26 @@
   width: 300px;
   background-color: #edf2f7;
   display: flex;
-  z-index: -999;
+  z-index: 1;
 
   .sidebar__list {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin: auto;
+    margin-top: 45px;
     a {
+      cursor: pointer;
       text-decoration: none;
       color: var(--text-color);
       display: flex;
       align-items: center;
       gap: 10px;
+
     }
-    margin-top: 45px;
+    .sidebar__list--items  {
+      cursor: pointer;
+    }
 
     .sidebar__list li {
       font-size: 18px;

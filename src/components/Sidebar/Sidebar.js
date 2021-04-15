@@ -8,14 +8,18 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__list">
-        <Link to="/submitarticles">
-          <FontAwesomeIcon icon={faPenNib} />
-          Dashboard
-        </Link>
-        <Link to="users">
-          <FontAwesomeIcon icon={faUsers} />
-          Users
-        </Link>
+        <div className="sidebar__list--items">
+          <Link to="/submitarticles">
+            <FontAwesomeIcon icon={faPenNib} />
+            Dashboard
+          </Link>
+        </div>
+        <div className="sidebar__list--items">
+          <Link to="users">
+            <FontAwesomeIcon icon={faUsers} />
+            Users
+          </Link>
+        </div>
       </div>
     </div>
   );
