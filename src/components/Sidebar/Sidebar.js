@@ -9,7 +9,7 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar__list">
         <div className="sidebar__list--items">
-          <Link to="/submitarticles">
+          <Link to="dashboard">
             <FontAwesomeIcon icon={faPenNib} />
             Dashboard
           </Link>

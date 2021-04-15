@@ -10,6 +10,13 @@
       max-width: 400px;
       max-height: 150px;
     }
+
+    .header__logo a {
+      display: flex;
+      align-items: center;
+    }
+
+
     .header__logo img {
       width: 100%;
     }
