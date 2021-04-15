@@ -1,5 +1,7 @@
-.App {
-  
+:root {
+  --blue-title: #63b3ed;
+  --text-color: #2d5282;
 }
 
-
+.App {
+}

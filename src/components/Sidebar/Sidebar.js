@@ -6,18 +6,17 @@ import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <div className="Sidebar">
-      <ul className="Sidebar__list">
-        <Link to="/manage">Manage</Link>
+    <div className="sidebar">
+      <div className="sidebar__list">
         <Link to="/submitarticles">
           <FontAwesomeIcon icon={faPenNib} />
-          Submit Articles
+          Dashboard
         </Link>
         <Link to="users">
           <FontAwesomeIcon icon={faUsers} />
           Users
         </Link>
-      </ul>
+      </div>
     </div>
   );
 }

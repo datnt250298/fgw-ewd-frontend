@@ -32,7 +32,7 @@ export default function Header() {
         <div className="header__right">
           <div className="header__right__account">
             <img
-              src="https://cms.greenwich.edu.vn/pluginfile.php/1/theme_adaptable/logo/1596790129/RGB_Logo%20DH%20Greenwich%20%28VN%291.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Justin_Bieber_in_Rosemont%2C_Illinois_%282015%29.jpg"
               alt=""
             />
           </div>
