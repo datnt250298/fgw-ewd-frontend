@@ -4,9 +4,15 @@ import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./Login.scss";
 import { useHistory } from "react-router";
 import AuthService from "../../services/auth.service";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { LOGIN_SUCCESS } from "../../app/store/auth/authSlice";
 
 export default function Login() {
   const history = useHistory();
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const dispatch = useDispatch();
+
   const [loginCredential, setLoginCredential] = useState({
     emailInput: "",
     passwordInput: "",
@@ -18,6 +24,7 @@ export default function Login() {
     try {
       const data = await AuthService.login(emailInput, passwordInput);
       if (data) {
+        dispatch(LOGIN_SUCCESS());
         history.push("/");
       }
     } catch (error) {
@@ -27,7 +34,7 @@ export default function Login() {
           error.response.data.message) ||
         error.message ||
         error.toString();
-        alert("Invalid email or password!");
+      alert("Invalid email or password!");
       throw error;
     }
   };
