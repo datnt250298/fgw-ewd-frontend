@@ -13,6 +13,10 @@ export default function Login() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const dispatch = useDispatch();
 
+  if (isLoggedIn) {
+    history.push("/");
+  }
+
   const [loginCredential, setLoginCredential] = useState({
     emailInput: "",
     passwordInput: "",
@@ -40,13 +44,6 @@ export default function Login() {
     setLoginCredential({ ...loginCredential, passwordInput: e.target.value });
   };
 
-  useEffect(() => {
-    if (localStorage.getItem("user")) {
-      history.push("/");
-      dispatch(loginSuccess());
-    }
-    return () => {};
-  }, [isLoggedIn]);
   return (
     <div className="login__container">
       <div className="login__form--wrapper">
