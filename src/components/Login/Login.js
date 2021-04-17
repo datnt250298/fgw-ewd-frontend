@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./Login.scss";
 import { useHistory } from "react-router";
+import AuthService from "../../services/auth.service";
 
 export default function Login() {
   const history = useHistory();
@@ -11,12 +12,24 @@ export default function Login() {
     passwordInput: "",
   });
 
-  const handleSubmitLogin = (e) => {
+  const handleSubmitLogin = async (e) => {
+    const { emailInput, passwordInput } = loginCredential;
     e.preventDefault();
-    console.log(loginCredential);
-
-    // actions to handle validate email, password & calling api to validate login credential from backend
-    history.push("/");
+    try {
+      const data = await AuthService.login(emailInput, passwordInput);
+      if (data) {
+        history.push("/");
+      }
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+        alert("Invalid email or password!");
+      throw error;
+    }
   };
 
   const handleEmailChange = (e) => {
