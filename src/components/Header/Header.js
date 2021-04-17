@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Header.scss";
+import { useSelector, useDispatch } from "react-redux";
+
 export default function Header() {
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    var user = localStorage.getItem("user");
+    console.log(user);
+    return () => {};
+  });
   return (
     <div className="header__container">
       <div className="header__wrapper">
