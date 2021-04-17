@@ -7,7 +7,7 @@ const Content = () => {
   return (
     <div className="content__wrapper">
       <div className="content">
-        {pageState === "dashboard" || pageState === "" ? (
+        {pageState === "dashboard" ? (
           <table className="articles__container">
             <thead>
               <tr>
