@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import "./Login.scss";
-import { Redirect, useHistory } from "react-router";
+import { useHistory } from "react-router";
 import AuthService from "../../services/auth.service";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { loginSuccess } from "../../app/store/auth/authSlice";
-import { navigateTo } from "../../app/store/content/contentSlice";
 
 export default function Login() {
   const history = useHistory();
@@ -41,6 +40,13 @@ export default function Login() {
     setLoginCredential({ ...loginCredential, passwordInput: e.target.value });
   };
 
+  useEffect(() => {
+    if (isLoggedIn) {
+      history.push("/");
+      dispatch(loginSuccess());
+    }
+    return () => {};
+  }, [isLoggedIn]);
   return (
     <div className="login__container">
       <div className="login__form--wrapper">
