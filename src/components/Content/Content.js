@@ -10,9 +10,11 @@ const Content = () => {
         {pageState === "dashboard" ? (
           <table className="articles__container">
             <thead>
-              <th>Topic</th>
-              <th>Duration</th>
-              <th>MC</th>
+              <tr>
+                <th>Topic</th>
+                <th>Duration</th>
+                <th>MC</th>
+              </tr>
             </thead>
             <tbody>
               <tr className="article__rows">
