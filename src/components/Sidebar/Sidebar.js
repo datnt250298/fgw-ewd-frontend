@@ -2,23 +2,26 @@ import React from "react";
 import "./Sidebar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenNib, faUsers } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar__list">
         <div className="sidebar__list--items">
-          <Link to="dashboard">
+          <NavLink
+            to="dashboard"
+            activeClassName="sidebar__list--items--active"
+          >
             <FontAwesomeIcon icon={faPenNib} />
             Dashboard
-          </Link>
+          </NavLink>
         </div>
         <div className="sidebar__list--items">
-          <Link to="users">
+          <NavLink to="users" activeClassName="sidebar__list--items--active">
             <FontAwesomeIcon icon={faUsers} />
             Users
-          </Link>
+          </NavLink>
         </div>
       </div>
     </div>
