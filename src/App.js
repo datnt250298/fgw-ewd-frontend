@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import LoginPage from "./pages/Login/LoginPage";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import PrivateRoute from "./routes/PrivateRoutes";
 
 function App() {
   return (
@@ -16,9 +17,9 @@ function App() {
           <LoginPage />
         </Route>
         <Redirect from="/" to="/dashboard" exact />
-        <Route path="/">
+        <PrivateRoute path="/">
           <Dashboard />
-        </Route>
+        </PrivateRoute>
       </Switch>
     </Router>
   );
