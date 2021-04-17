@@ -41,7 +41,7 @@ export default function Login() {
   };
 
   useEffect(() => {
-    if (isLoggedIn) {
+    if (localStorage.getItem("user")) {
       history.push("/");
       dispatch(loginSuccess());
     }
