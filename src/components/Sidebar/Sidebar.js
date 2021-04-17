@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Sidebar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenNib, faUsers } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { navigateTo } from "../../app/store/content/contentSlice";
 
 function Sidebar() {
   const dispatch = useDispatch();
+  const location = useLocation();
+  const pageToShow = location.pathname.substring(1);
+
+  useEffect(() => {
+    dispatch(navigateTo(pageToShow));
+    return () => {};
+  });
   return (
     <div className="sidebar">
       <div className="sidebar__list">
@@ -15,7 +22,7 @@ function Sidebar() {
           <NavLink
             to="dashboard"
             activeClassName="sidebar__list--items--active"
-            onClick={() => dispatch(navigateTo("dashboard"))}
+            onClick={() => dispatch(navigateTo(pageToShow))}
           >
             <FontAwesomeIcon icon={faPenNib} />
             Dashboard
@@ -25,7 +32,7 @@ function Sidebar() {
           <NavLink
             to="users"
             activeClassName="sidebar__list--items--active"
-            onClick={() => dispatch(navigateTo("users"))}
+            onClick={() => dispatch(navigateTo(pageToShow))}
           >
             <FontAwesomeIcon icon={faUsers} />
             Users

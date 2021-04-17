@@ -15,6 +15,4 @@ export const contentSlice = createSlice({
 
 export const { navigateTo } = contentSlice.actions;
 
-console.log(contentSlice);
-
 export default contentSlice.reducer;
