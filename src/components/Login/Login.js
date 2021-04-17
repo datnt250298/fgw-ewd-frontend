@@ -27,7 +27,6 @@ export default function Login() {
       if (data) {
         dispatch(loginSuccess());
         history.push("/");
-        dispatch(navigateTo("dashboard"));
       }
     } catch (error) {
       alert("Invalid email or password!");

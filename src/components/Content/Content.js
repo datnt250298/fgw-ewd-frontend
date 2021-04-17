@@ -7,7 +7,7 @@ const Content = () => {
   return (
     <div className="content__wrapper">
       <div className="content">
-        {pageState === "dashboard" ? (
+        {pageState === "dashboard" || pageState === "" ? (
           <table className="articles__container">
             <thead>
               <tr>
@@ -50,8 +50,10 @@ const Content = () => {
               </tr>
             </tbody>
           </table>
+        ) : pageState === "users" ? (
+          <div>Users</div>
         ) : (
-          pageState === "users" && <div>Users</div>
+          <div>404 Not Found</div>
         )}
       </div>
     </div>
