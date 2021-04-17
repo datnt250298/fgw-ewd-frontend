@@ -7,13 +7,13 @@ export const authSlice = createSlice({
   },
 
   reducers: {
-    LOGIN_SUCCESS: (state) => {
+    loginSuccess: (state) => {
       state.isLoggedIn = true;
     },
   },
 });
 
-export const { LOGIN_SUCCESS } = authSlice.actions;
+export const { loginSuccess } = authSlice.actions;
 
 console.log(authSlice);
 
