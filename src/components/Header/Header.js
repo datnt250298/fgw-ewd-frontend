@@ -1,7 +1,14 @@
 import React, { useEffect } from "react";
 import "./Header.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import AuthService from "../../services/auth.service";
 
 export default function Header() {
+  const handleLogout = () => {
+    AuthService.logout();
+    window.location.reload();
+  };
   return (
     <div className="header__container">
       <div className="header__wrapper">
@@ -38,6 +45,10 @@ export default function Header() {
               src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Justin_Bieber_in_Rosemont%2C_Illinois_%282015%29.jpg"
               alt=""
             />
+            <div className="header__logout" onClick={() => handleLogout()}>
+              <FontAwesomeIcon icon={faSignOutAlt} />
+              Logout
+            </div>
           </div>
         </div>
       </div>
