@@ -51,7 +51,37 @@ const Content = () => {
             </tbody>
           </table>
         ) : pageState === "users" ? (
-          <div>Users</div>
+          <div className="users__container">
+            <button className="users__button">Edit</button>
+            <table className="users__table">
+              <tbody>
+                <tr>
+                  <td className="users__labels">Username</td>
+                  <td className="users__center-align">student001</td>
+                </tr>
+                <tr>
+                  <td className="users__labels">Email</td>
+                  <td className="users__center-align">student001@gmail.com</td>
+                </tr>
+                <tr>
+                  <td className="users__labels">Password</td>
+                  <td className="users__center-align">**********</td>
+                </tr>
+                <tr>
+                  <td className="users__labels">Role</td>
+                  <td className="users__center-align">
+                    <div className="users__blue-round-boxes">Student</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="users__labels">Faculty</td>
+                  <td className="users__center-align">
+                    <div className="users__blue-round-boxes">IT</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         ) : (
           <div>404 Not Found</div>
         )}

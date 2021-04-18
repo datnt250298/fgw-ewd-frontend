@@ -23,8 +23,8 @@
       border-spacing: 0em 8px;
 
       thead {
-        th{
-          border-bottom: 1px solid #E2E8F0;
+        th {
+          border-bottom: 1px solid #e2e8f0;
           height: 50px;
           width: 25%;
           font-size: 16px;
@@ -36,7 +36,6 @@
         height: 100px;
         margin-bottom: 8px;
         text-align: center;
-
 
         .article__title {
           font-weight: bold;
@@ -64,6 +63,52 @@
           }
         }
       }
+    }
+  }
+
+  .users__container {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+
+    .users__table {
+      width: 90%;
+      border-spacing: 0px 30px;
+      margin: auto;
+
+      tr {
+        background-color: #f7fafc;
+        height: 100px;
+      }
+    }
+
+    .users__button {
+      border-radius: 5px;
+      background-color: var(--text-color);
+      color: white;
+      padding: 10px 40px;
+      font-size: 16px;
+      align-self: flex-end;
+      margin-right: 5%;
+    }
+
+    .users__labels {
+      font-weight: bold;
+      padding-left: 100px;
+    }
+
+    .users__blue-round-boxes {
+      border-radius: 50px;
+      background-color: var(--text-color);
+      padding: 5px 30px;
+      width: 30%;
+      color: white;
+      text-align: center;
+      margin: auto;
+    }
+
+    .users__center-align {
+      text-align: center;
     }
   }
 }
