@@ -41,13 +41,15 @@ export default function Header() {
         </div>
         <div className="header__right">
           <div className="header__right__account">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Justin_Bieber_in_Rosemont%2C_Illinois_%282015%29.jpg"
-              alt=""
-            />
-            <div className="header__logout" onClick={() => handleLogout()}>
-              <FontAwesomeIcon icon={faSignOutAlt} />
-              Logout
+            <div className="header__avatar">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Justin_Bieber_in_Rosemont%2C_Illinois_%282015%29.jpg"
+                alt=""
+              />
+              <div className="header__logout" onClick={() => handleLogout()}>
+                <FontAwesomeIcon icon={faSignOutAlt} />
+                Logout
+              </div>
             </div>
           </div>
         </div>
